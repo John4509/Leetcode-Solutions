@@ -1,2 +1,2 @@
-# vigilant-octo-barnacle
-Use the repository to save the idea for solving leetcode
+# LeetCode(https://leetcode.com/problemset/all/)
+Record ideas to solve problems in Leetcode
