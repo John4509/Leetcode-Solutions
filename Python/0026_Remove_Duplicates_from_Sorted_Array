@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         # cannot create new array
-        # https://ithelp.ithome.com.tw/articles/10270237
         i = 0
         j = 1
         
