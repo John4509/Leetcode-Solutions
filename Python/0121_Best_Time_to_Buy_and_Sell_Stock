@@ -1,0 +1,17 @@
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        profit_array = []
+        for i in range(len(prices)):
+            for j in range(i,len(prices)):
+                profit = prices[j] - prices[i]
+                profit_array.append(profit)
+        
+        if max(profit_array) > 0:
+            return max(profit_array)
+        else:
+            return 0
+ ==================================================>fail for Memory Limit Exceeded
