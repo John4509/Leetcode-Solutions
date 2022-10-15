@@ -15,3 +15,22 @@ class Solution(object):
         else:
             return 0
  ==================================================>fail for Memory Limit Exceeded
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        max_profit = 0
+        for i in range(len(prices)):
+            for j in range(i,len(prices)):
+                temp_profit = prices[j] - prices[i]
+                if max_profit < temp_profit:
+                    max_profit = temp_profit
+        
+        if max_profit != 0 :
+            return max_profit
+        else:
+            return max_profit
+==================================================>fail for Time Limit Exceeded
+
