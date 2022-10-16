@@ -14,3 +14,20 @@ class Solution(object):
                 exit_array['1'].remove(i)
         
         return exit_array['1'][0]
+        
+        
+# XOR
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        
+        target = nums[0]
+        if len(nums) == 1:
+            return target
+        for i in range(1,len(nums)):
+            target ^= nums[i] # XOR
+        
+        return target
