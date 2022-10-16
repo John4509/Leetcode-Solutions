@@ -1,0 +1,16 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        exit_array = {'1':[], '2':[]}
+        
+        for i in nums:
+            if i not in exit_array['1']:
+                exit_array['1'].append(i)
+            else:
+                exit_array['2'].append(i)
+                exit_array['1'].remove(i)
+        
+        return exit_array['1'][0]
