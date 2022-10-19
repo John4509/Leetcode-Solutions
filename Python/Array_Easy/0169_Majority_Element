@@ -1,0 +1,18 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        
+        count_dict = {}
+        if len(nums) == 1:
+            return nums[0]
+        
+        for i in nums:
+            if i not in count_dict.keys():
+                count_dict.update({i:1})
+            else:
+                count_dict[i] +=1
+                if  count_dict[i] > len(nums) /2:
+                    return i
