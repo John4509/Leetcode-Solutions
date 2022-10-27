@@ -16,3 +16,33 @@ class Solution(object):
                 count_dict[i] +=1
                 if  count_dict[i] > len(nums) /2:
                     return i
+                    
+###################################################   
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        ans = nums[len(nums)//2]
+        return ans
+        if len(nums) == 1:
+            return nums[0]
+# Moore voting algorithm
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ans = 0
+        count = 0
+        for i in range(len(nums)):
+            if count == 0:
+                ans  = nums[i]
+            if ans == nums[i] :
+                count += 1
+            else:
+                count -= 1
+        return ans
