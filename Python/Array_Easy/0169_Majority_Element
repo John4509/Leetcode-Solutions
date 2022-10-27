@@ -36,6 +36,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        """
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+        """
         ans = 0
         count = 0
         for i in range(len(nums)):
