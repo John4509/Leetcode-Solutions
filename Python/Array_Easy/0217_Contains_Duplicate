@@ -16,10 +16,7 @@ class Solution:
                 dict_count[i] +=1
             else:
                 dict_count[i] = 1
-                
-        for i in dict_count.values():
-            if i > 1:
+            
+            if dict_count[i] >1:
                 return True
-        
         return False
-                
