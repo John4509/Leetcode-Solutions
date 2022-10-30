@@ -5,9 +5,24 @@ class Solution(object):
         :rtype: int
         """
         """
-        Time complexity: O(n)
+        Time complexity: O(n^2)
         Space complexity: O(1)
         """
         for i in range(len(nums)+1):
             if i not in nums:
                 return i
+#######################################
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        """
+        Time complexity: O(n)
+        Space complexity: O(1)
+        """
+        total = (len(nums) +1)*len(nums)/2
+        for i in nums:
+            total-= i
+        return total
