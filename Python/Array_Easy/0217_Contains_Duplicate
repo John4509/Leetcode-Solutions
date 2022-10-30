@@ -1,0 +1,25 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        
+        """
+        Time complexity: O(n^2)
+        Space complexity: O(n)
+        """
+        dict_count = {}
+        
+        for i in nums:
+            if i in dict_count.keys():
+                dict_count[i] +=1
+            else:
+                dict_count[i] = 1
+                
+        for i in dict_count.values():
+            if i > 1:
+                return True
+        
+        return False
+                
