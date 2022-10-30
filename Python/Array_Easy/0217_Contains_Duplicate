@@ -20,3 +20,13 @@ class Solution:
             if dict_count[i] >1:
                 return True
         return False
+###########################################
+# Reference 
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+
+        return not (len(nums) == len(set(nums)))
