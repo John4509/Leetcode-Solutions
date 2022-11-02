@@ -1,0 +1,31 @@
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        ans = [1 for _ in range(len(nums))]
+        
+        pre_product = 1
+        for i in range(len(nums)):
+            ans[i] *=  pre_product
+            pre_product *= nums[i]
+        
+        pre_product = 1
+        for i in range(len(nums)-1, -1, -1):
+            ans[i] *=  pre_product
+            pre_product *= nums[i]
+        
+        return ans
+        
+        
+        
+        
+        # Time Limit Exceeded
+#         ans = []
+#         for i in range(len(nums)):
+#             temp = 1
+#             for j in range(len(nums)):
+#                 if j == i:
+#                     pass
+#                 else:
+#                     temp *= nums[j]
+#             ans.append(temp)
+            
+#         return ans
